@@ -1,0 +1,23 @@
+   yaml
+   version: '3'
+   services:
+     frontend:
+       build:
+         context: ./frontend
+       ports:
+         - "3000:3000"  # Adjust the port as needed
+       depends_on:
+         - backend
+         - login
+
+     backend:
+       build:
+         context: ./backend
+       ports:
+         - "5000:5000"  # Adjust the port as needed
+
+     login:
+       build:
+         context: ./login
+       ports:
+         - "4000:4000"  # Adjust the port as needed
