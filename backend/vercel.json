@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "name": "matinee-backend",
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "app.py"
+      }
+    ]
+  }
+  
