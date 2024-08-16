@@ -4,7 +4,7 @@ services:
     env: node
     plan: free # or use 'starter', 'standard', etc.
     buildCommand: npm install && npm run build
-    startCommand: npm start
+    startCommand: npm run dev
     autoDeploy: true
 
 # Optional: define a background worker
@@ -14,5 +14,5 @@ workers:
     env: node
     plan: free
     buildCommand: npm install
-    startCommand: npm run worker
+    startCommand: npm run dev
 
