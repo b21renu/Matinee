@@ -1,0 +1,16 @@
+# Ignore node_modules directory (for Node.js projects)
+node_modules/
+frontend/node_modules
+Login/server/node_modules
+Login/client/node_modules
+
+# Ignore Python-specific files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env/
+*.venv/
+
+#ignore
+*.md

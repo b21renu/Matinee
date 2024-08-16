@@ -1,0 +1,144 @@
+.how-to-use-guide {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to right, #ff7f50, #800080);
+  }
+  
+  .title-container {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .title-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .title-container p {
+    font-size: 1.125rem;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  
+  .card-slider {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-content {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card-inner.next {
+    transform: translateX(-100%);
+  }
+  
+  .card-inner.prev {
+    transform: translateX(100%);
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    overflow: hidden;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffeb3b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card p {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .card img {
+    margin-top: 1rem;
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  .navigation {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    gap: 1rem;
+  }
+  
+  .navigation button {
+    padding: 0.5rem;
+    background: transparent;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+  
+  .navigation button:hover {
+    background: #ffeb3b;
+  }
+  
+  .navigation p {
+    font-size: 0.875rem;
+    color: white;
+  }
+  
+  .login-button {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffeb3b;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .login-button:hover {
+    background-color: #ffc107;
+  }
+  
