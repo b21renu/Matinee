@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: matinee-web-service
+    env: node
+    plan: free # or use 'starter', 'standard', etc.
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    autoDeploy: true
+
+# Optional: define a background worker
+workers:
+  - type: worker
+    name: matinee-worker
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run worker
+
