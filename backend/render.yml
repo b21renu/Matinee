@@ -1,0 +1,10 @@
+# Backend Service
+- type: web
+  name: backend
+  env: node
+  buildCommand: npm install && npm run build
+  startCommand: npm start
+  plan: free # or another plan depending on your needs
+  routes:
+    - src: /backend/*
+      dest: /backend/
