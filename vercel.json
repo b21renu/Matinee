@@ -1,0 +1,22 @@
+{
+    "projects": [
+      {
+        "name": "matinee-frontend",
+        "directory": "/frontend",
+        "framework": "nextjs",
+        "buildCommand": "npm run build",
+        "outputDirectory": "out"
+      },
+      {
+        "name": "matinee-backend",
+        "directory": "/backend",
+        "buildCommand": "python app.py"
+      },
+      {
+        "name": "matinee-login-server",
+        "directory": "/Login/server",
+        "buildCommand": "node index.js"
+      }
+    ]
+  }
+  
