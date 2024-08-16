@@ -1,16 +1,33 @@
 services:
+  # Frontend Service
   - type: web
-    name: matinee-web-service
+    name: frontend
     env: node
-    plan: free
-    buildCommand: npm install
-    startCommand: npm run dev
-    autoDeploy: true
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm start
+    plan: free # or another plan depending on your needs
+    routes:
+      - src: /frontend/*
+        dest: /frontend/
 
-workers:
-  - type: worker
-    name: matinee-worker
+  # Backend Service
+  - type: web
+    name: backend
     env: node
-    plan: free
-    buildCommand: npm install
-    startCommand: npm run dev
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm start
+    plan: free # or another plan depending on your needs
+    routes:
+      - src: /backend/*
+        dest: /backend/
+
+  # Login Service
+  - type: web
+    name: login
+    env: node
+    buildCommand: cd login && npm install && npm run build
+    startCommand: cd login && npm start
+    plan: free # or another plan depending on your needs
+    routes:
+      - src: /login/*
+        dest: /login/
